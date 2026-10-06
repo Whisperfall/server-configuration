@@ -291,7 +291,7 @@ if [[ "$PUBKEY_AUTH" != "yes" ]]; then
     exit 1
 fi
 
-if [[ "$ROOT_LOGIN" != "prohibit-password" ]]; then
+if [[ "$ROOT_LOGIN" != "prohibit-password" && "$ROOT_LOGIN" != "without-password" ]]; then
     echo "ERROR: PermitRootLogin beklenen değer değil."
     rollback
     exit 1
